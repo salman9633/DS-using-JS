@@ -3,12 +3,10 @@ class Node {
     next: number|null
     prev: number|null
 
-
     constructor(value:any) {
         this.value = value
         this.next = null
         this.prev = null
-
     }
 }
 
@@ -43,7 +41,6 @@ class doubly {
 
         }
         this.size++
-
     }
 
     prepend(value:any){

@@ -78,8 +78,11 @@ class LinkedList {
         let middle=Math.floor(this.size/2)
         console.log(middle);
         let temp=this.head
-        while (temp!=null&&middle) {
-            temp=temp.next
+
+        let i=0;
+        while (i<middle-1) {
+            temp=temp.next;
+            i++;
         }
 
         newNode.next=temp.next
