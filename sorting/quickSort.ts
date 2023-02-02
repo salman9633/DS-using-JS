@@ -11,6 +11,12 @@ function helperfn(arr: number[], start: number, end: number) {
     let i = start + 1
     let j = end
 
+    console.log('pivot',pivot,arr[pivot]);
+    console.log('i_____',i,arr[i]);
+    console.log('j.....',j,arr[j]);
+    
+
+
     while (i <= j) {
         if (arr[i] > arr[pivot] && arr[j] < arr[pivot]) {
             swap(arr, i, j);
@@ -37,4 +43,4 @@ function swap(a: number[], i: number, j: number) {
 }
 
 
-console.log(quickSort([3, 55, 7, 6, 5, 0, 0, 6, 4, 5, 3333, 5]));
+console.log(quickSort([3, 55, 7,9, 5]));

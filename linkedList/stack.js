@@ -4,23 +4,18 @@ class Node {
         this.next = null
     }
 }
-
-
 class stack{
     constructor() {
         this.head = null
         this.tail = null
         this.size = 0
     }
-
     isEmpty(){
         return this.size===0
     }
-
     getSize(){
         return this.Size
     }
-
     push(value){
           const newNode=new Node()
           if(this.isEmpty()){

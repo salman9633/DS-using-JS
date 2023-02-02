@@ -8,7 +8,7 @@ function selectionSort(arr: number[]) {
         for (let i = j + 1; i < len; i++) {
             // console.log(';');
             
-            if (arr[i] < arr[index]) {
+            if (arr[i] > arr[index]) {
                 index = i
             }
         }
@@ -20,4 +20,4 @@ function selectionSort(arr: number[]) {
 }
 
 
-console.log(selectionSort([3, 7, 4, 5, 2, 7,1000000]));
+console.log(selectionSort([3, 7, 4, 5, 2, -7,10]));

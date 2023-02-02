@@ -3,29 +3,23 @@ class MyStack {
     constructor() {
         this.arr=[]
     }
-
     push(x: number): void {
         this.arr.push(x)
         for(let i=0;i<this.arr.length-1;i++){
             this.arr.push(this.arr.shift()!)
         }
     }
-
     pop(): any {
         this.arr.shift()
 
     }
-
     top(): any {
         return this.arr[0]
 
     }
-
     empty(): boolean {
         return this.arr.length==0
-    }
-
-    
+    }   
 }
 
 const stack= new MyStack()
