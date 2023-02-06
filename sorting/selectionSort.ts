@@ -12,7 +12,8 @@ function selectionSort(arr: number[]) {
                 index = i
             }
         }
-        let smallest = arr[index]
+        
+        let  smallest = arr[index]
         arr[index] = arr[j]
         arr[j] = smallest
     }

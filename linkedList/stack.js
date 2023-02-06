@@ -17,7 +17,7 @@ class stack{
         return this.Size
     }
     push(value){
-          const newNode=new Node()
+          const newNode=new Node(value)
           if(this.isEmpty()){
             this.head=newNode
             this.tail=newNode
