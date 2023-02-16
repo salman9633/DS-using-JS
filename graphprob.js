@@ -20,36 +20,29 @@
 //     }
 // }
 
-class Node{
-    constructor(value){
-        this.value=value
-        this.next=null
-    }
+const treeify=require ('treeify')
 
-}
 
-class Tree{
 
-    constructor(){
-        this.root=null
-    }
+// function printTree(tree) {
+//     if (!tree || !tree.root) {
+//       console.log("The tree is empty.");
+//       return;
+//     }
+  
+//     const printNode = node => {
+//       console.log(node.value);
+//       if (node.next) {
+//         printNode(node.next);
+//       }
+//     };
+  
+//     printNode(tree.root);
+//   }
+  
 
-    subTree(val){
-        const newNode=new Node(val)
 
-        if(this.root==null){
-            this.root=newNode
-        }else{
-            this.root.next=newNode
-            count++;
-        }
-        return count;
-    }
 
-}
+// printTree(tree)
 
-const tree=new Tree()
-
-tree.subTree(5)
-tree.subTree(3)
-tree.subTree(7)
+console.log(treeify.asTree(tree,true));
