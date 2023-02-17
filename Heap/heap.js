@@ -1,29 +1,28 @@
-
+const treeify= require('treeify')
 //--------------------------MIN HEAP------------------------------------
 class MinHeap {
     constructor() {
         this.heap = [null];
     }
+
     insert(num) {
         this.heap.push(num)
         if (this.heap.length > 2) {
             let idx = this.heap.length - 1;
             while (this.heap[idx] < this.heap[Math.floor(idx / 2)]) {
                 if (idx >= 1) {
-
-
                     [this.heap[Math.floor(idx / 2)], this.heap[idx]] = [this.heap[idx], this.heap[Math.floor(idx / 2)]]; // swaps parent and child elements using array destructuring
                     if (Math.floor(idx / 2) > 1) {
                         idx = Math.floor(idx / 2); // sets index to next above parent element for checking condition
-                    } else {
+                    } else { 
                         break;
                     }
                 }
             }
         }
     }
-    remove() {
 
+    remove() {
         let smallest = this.heap[1]
         if (this.heap.length > 2) {
             this.heap[1] = this.heap[this.heap.length - 1] // makes first element equal to the last element
@@ -71,3 +70,5 @@ minHeap.insert(1)
 console.log(minHeap.heap);
 console.log(minHeap.remove());
 console.log(minHeap.heap);
+
+console.log(treeify.asTree(minHeap,true));

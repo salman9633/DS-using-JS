@@ -120,6 +120,35 @@ class BinarySearchTree {
         }
     }
 
+    delete(value:any){
+        this.root=this.deleteNode(this.root,value) 
+    }
+
+    deleteNode(root:any,value:any){
+        if(root === null){
+            return root
+        }
+
+        if(value<root.value){
+            root.left=this.deleteNode(root.left,value)
+        }else if(value>root.value){
+            root.right=this.deleteNode(root.right,value)
+        }else{
+            if(!root.left&&!root.right){
+                return null
+            }
+            if(!root.left){
+                return root.right
+            }
+            if(!root.right){
+                return root.left
+            }
+            root.value=this.min(root.right)
+            root.right=this.deleteNode(root.right,value)
+        }
+        return root
+    }
+
    
 }
 
@@ -142,6 +171,10 @@ bst.levelOrder()
 
 console.log(bst.min(bst.root), 'min');
 console.log(bst.max(bst.root), 'max');
+bst.delete(7)
+bst.preOrder(bst.root)
+
+
 
 console.log(treeify.asTree(bst, true))
 

@@ -1,3 +1,5 @@
+import {Traversal} from './traversal'
+
 class Graph{
     adjacencyList:any
     constructor(){
@@ -45,6 +47,8 @@ class Graph{
 }
 
 const graph= new Graph()
+const traversal = new Traversal()
+
 graph.addVertex("A")
 graph.addVertex("B")
 graph.addVertex("C")
@@ -56,5 +60,8 @@ graph.addEdge("B","C")
 graph.display()
 graph.removeVertex("B")
 graph.display()
+traversal.bfs("A")
 
-export {}
+
+
+export {Graph}
